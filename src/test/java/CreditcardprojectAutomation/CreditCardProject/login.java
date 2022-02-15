@@ -35,7 +35,13 @@ WebDriver driver;
 		Passwordkeyin.sendKeys("Vinoth@12");
 	    WebElement Submit= driver.findElement(By.xpath("//button[@type='submit']"));
 	    Submit.click();
+	    System.out.println("Login function completed"); // This is committed by gokul
     }
+//    @Test(priority =1)
+//    public void afterlogin()
+//    {
+//    	
+//    }
     @AfterMethod
     public void driverclose()
     {
