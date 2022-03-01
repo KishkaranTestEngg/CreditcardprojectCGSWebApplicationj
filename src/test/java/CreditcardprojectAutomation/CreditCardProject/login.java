@@ -46,7 +46,7 @@ WebDriver driver;
     Assert.assertEquals(Expected, CurrentUrl);
     System.out.println("pass");
     {
-    	System.out.println("fail"); // URL check done gokul on 17/02/2022 // Rechecked by kishore lead on 22/02/2022 wednesday
+    	System.out.println("fail"); // URL check done gokul on 17/02/2022 // Rechecked by kishore lead on 01/03/2022
     }
   }
     @AfterMethod
