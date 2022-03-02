@@ -5,8 +5,8 @@
     <classes>
       <class name="CreditcardprojectAutomation.CreditCardProject.login">
         <methods>
-          <include name="loginfunctionality"/>
           <include name="Appdriverhit"/>
+          <include name="NavigatetoApplicationfullfillmentoption"/>
         </methods>
       </class> <!-- CreditcardprojectAutomation.CreditCardProject.login -->
     </classes>
