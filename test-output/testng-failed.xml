@@ -5,6 +5,7 @@
     <classes>
       <class name="CreditcardprojectAutomation.CreditCardProject.login">
         <methods>
+          <include name="clickApplicationfullfillmentoption"/>
           <include name="Appdriverhit"/>
           <include name="NavigatetoApplicationfullfillmentoption"/>
         </methods>

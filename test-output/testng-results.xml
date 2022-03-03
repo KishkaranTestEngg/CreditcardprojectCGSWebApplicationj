@@ -2,31 +2,31 @@
 <testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="26200" started-at="2022-03-02T17:31:28 IST" finished-at="2022-03-02T17:31:54 IST">
+  <suite name="Default suite" duration-ms="29581" started-at="2022-03-03T15:17:30 IST" finished-at="2022-03-03T15:17:59 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="26200" started-at="2022-03-02T17:31:28 IST" finished-at="2022-03-02T17:31:54 IST">
+    <test name="Default test" duration-ms="29581" started-at="2022-03-03T15:17:30 IST" finished-at="2022-03-03T15:17:59 IST">
       <class name="CreditcardprojectAutomation.CreditCardProject.login">
-        <test-method status="PASS" signature="Appdriverhit()[pri:0, instance:CreditcardprojectAutomation.CreditCardProject.login@22eeefeb]" name="Appdriverhit" is-config="true" duration-ms="14272" started-at="2022-03-02T17:31:28 IST" finished-at="2022-03-02T17:31:42 IST">
+        <test-method status="PASS" signature="Appdriverhit()[pri:0, instance:CreditcardprojectAutomation.CreditCardProject.login@22eeefeb]" name="Appdriverhit" is-config="true" duration-ms="8461" started-at="2022-03-03T15:17:30 IST" finished-at="2022-03-03T15:17:38 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Appdriverhit -->
-        <test-method status="PASS" signature="loginfunctionality()[pri:0, instance:CreditcardprojectAutomation.CreditCardProject.login@22eeefeb]" name="loginfunctionality" duration-ms="2271" started-at="2022-03-02T17:31:42 IST" finished-at="2022-03-02T17:31:44 IST">
+        <test-method status="PASS" signature="loginfunctionality()[pri:0, instance:CreditcardprojectAutomation.CreditCardProject.login@22eeefeb]" name="loginfunctionality" duration-ms="2198" started-at="2022-03-03T15:17:38 IST" finished-at="2022-03-03T15:17:40 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginfunctionality -->
-        <test-method status="PASS" signature="afterlogincheckwhethercorrecturl()[pri:1, instance:CreditcardprojectAutomation.CreditCardProject.login@22eeefeb]" name="afterlogincheckwhethercorrecturl" duration-ms="2008" started-at="2022-03-02T17:31:44 IST" finished-at="2022-03-02T17:31:46 IST">
+        <test-method status="PASS" signature="afterlogincheckwhethercorrecturl()[pri:1, instance:CreditcardprojectAutomation.CreditCardProject.login@22eeefeb]" name="afterlogincheckwhethercorrecturl" duration-ms="2017" started-at="2022-03-03T15:17:40 IST" finished-at="2022-03-03T15:17:42 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterlogincheckwhethercorrecturl -->
-        <test-method status="PASS" signature="NavigatetoApplicationfullfillmentoption()[pri:2, instance:CreditcardprojectAutomation.CreditCardProject.login@22eeefeb]" name="NavigatetoApplicationfullfillmentoption" duration-ms="6057" started-at="2022-03-02T17:31:46 IST" finished-at="2022-03-02T17:31:53 IST">
+        <test-method status="PASS" signature="NavigatetoApplicationfullfillmentoption()[pri:2, instance:CreditcardprojectAutomation.CreditCardProject.login@22eeefeb]" name="NavigatetoApplicationfullfillmentoption" duration-ms="5124" started-at="2022-03-03T15:17:42 IST" finished-at="2022-03-03T15:17:47 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NavigatetoApplicationfullfillmentoption -->
-        <test-method status="PASS" signature="driverclose()[pri:3, instance:CreditcardprojectAutomation.CreditCardProject.login@22eeefeb]" name="driverclose" duration-ms="1386" started-at="2022-03-02T17:31:53 IST" finished-at="2022-03-02T17:31:54 IST">
+        <test-method status="PASS" signature="clickApplicationdatacaptureoption()[pri:3, instance:CreditcardprojectAutomation.CreditCardProject.login@22eeefeb]" name="clickApplicationdatacaptureoption" duration-ms="11745" started-at="2022-03-03T15:17:47 IST" finished-at="2022-03-03T15:17:59 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- driverclose -->
+        </test-method> <!-- clickApplicationdatacaptureoption -->
       </class> <!-- CreditcardprojectAutomation.CreditCardProject.login -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

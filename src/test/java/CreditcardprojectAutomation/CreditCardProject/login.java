@@ -1,5 +1,6 @@
 package CreditcardprojectAutomation.CreditCardProject;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -56,10 +57,20 @@ WebDriver driver;
 		driver.findElement(By.xpath("/html/body/app-root/app-admin/div/div[2]/div/div/nav/div[2]/perfect-scrollbar/div/div[1]/div[2]/ul[2]/li/a")).click();
 		System.out.println("Successfully clicked the Applicationfullfillmentoption"); // code reworked upto clickapplicationfullfillment option
 	}
+	@Test(priority=3)
+	public void clickApplicationdatacaptureoption() throws InterruptedException
+	{
+		Thread.sleep(2000);
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/app-root/app-admin/div/div[2]/div/div/nav/div[2]/perfect-scrollbar/div/div[1]/div[2]/ul[2]/li/ul/li[1]/a/span[2]")));
+	    driver.findElement(By.xpath("/html/body/app-root/app-admin/div/div[2]/div/div/nav/div[2]/perfect-scrollbar/div/div[1]/div[2]/ul[2]/li/ul/li[1]/a/span[2]")).click();
+	    System.out.println("Successfully able to open application data capture option"); // Today worked code datacapture by kishore 03/3/2021
 	
-	@Test(priority =3)
-	public void driverclose() {
-		driver.close();
-		System.out.println("Chrome driver closed");
 	}
+	
+//	@Test(priority =4)
+//	public void driverclose() {
+//		driver.close();
+//		System.out.println("Chrome driver closed");
+//	}
 }
