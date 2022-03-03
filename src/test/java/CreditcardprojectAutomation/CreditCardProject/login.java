@@ -64,7 +64,7 @@ WebDriver driver;
 		WebDriverWait wait = new WebDriverWait(driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/app-root/app-admin/div/div[2]/div/div/nav/div[2]/perfect-scrollbar/div/div[1]/div[2]/ul[2]/li/ul/li[1]/a/span[2]")));
 	    driver.findElement(By.xpath("/html/body/app-root/app-admin/div/div[2]/div/div/nav/div[2]/perfect-scrollbar/div/div[1]/div[2]/ul[2]/li/ul/li[1]/a/span[2]")).click();
-	    System.out.println("Successfully able to open application data capture option"); // Today worked code datacapture by kishore 03/3/2021
+	    System.out.println("Successfully able to open application data capture option"); // Today worked code datacapture by kishore team lead 03/03/2022
 	
 	}
 	
