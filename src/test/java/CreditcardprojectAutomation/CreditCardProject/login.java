@@ -1,9 +1,12 @@
 package CreditcardprojectAutomation.CreditCardProject;
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
@@ -65,12 +68,40 @@ WebDriver driver;
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/app-root/app-admin/div/div[2]/div/div/nav/div[2]/perfect-scrollbar/div/div[1]/div[2]/ul[2]/li/ul/li[1]/a/span[2]")));
 	    driver.findElement(By.xpath("/html/body/app-root/app-admin/div/div[2]/div/div/nav/div[2]/perfect-scrollbar/div/div[1]/div[2]/ul[2]/li/ul/li[1]/a/span[2]")).click();
 	    System.out.println("Successfully able to open application data capture option"); // Today worked code datacapture by kishore team lead 03/03/2022
+	    //Thread.sleep(1000);
 	
 	}
+	
+	@Test(priority=4)
+	public void OpenNewApplicationfilldetails() throws InterruptedException
+	{
+	     Thread.sleep(3000);
+	     Actions actions = new Actions(driver);
+	     WebElement NewApplication = driver.findElement(By.xpath("//*[@id='nav-appl-tab']"));
+	     actions.moveToElement(NewApplication).moveToElement(driver.findElement(By.xpath("//*[@id='nav-appl-tab']"))).build().perform();
+	     ((JavascriptExecutor)driver).executeScript("arguments[0].click()", driver.findElement(By.xpath("//*[@id='nav-appl-tab']")));
+	     System.out.println("In applicationdatacapturepage New application opened");
+	}
+
+	@Test(priority=5)
+    public void afteropeningapplicationfillbankdetails() throws InterruptedException
+	{
+	Thread.sleep(3000);
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+    js.executeScript("window.scrollBy(0,50)");
+    Thread.sleep(3000);
+    Actions actions = new Actions(driver);
+    WebElement fillbankappnumber = driver.findElement(By.xpath("/html/body/app-root/app-admin/div/div[2]/div/div/div/div/div/div/div/app-application-data/div[2]/div/div/div/div[1]/app-card/div/div/div/form/div[1]/div[1]/input"));
+    actions.moveToElement(fillbankappnumber).moveToElement(driver.findElement(By.xpath("/html/body/app-root/app-admin/div/div[2]/div/div/div/div/div/div/div/app-application-data/div[2]/div/div/div/div[1]/app-card/div/div/div/form/div[1]/div[1]/input")));
+    ((JavascriptExecutor)driver).executeScript("arguments[0].click()", driver.findElement(By.xpath("/html/body/app-root/app-admin/div/div[2]/div/div/div/div/div/div/div/app-application-data/div[2]/div/div/div/div[1]/app-card/div/div/div/form/div[1]/div[1]/input")));
+    fillbankappnumber.sendKeys("BICABC0412");
+    System.out.println("BankAppnofilled"); // Today upto bank fill details code done by kishore lead  07/03/2022
+}
+}
 	
 //	@Test(priority =4)
 //	public void driverclose() {
 //		driver.close();
 //		System.out.println("Chrome driver closed");
 //	}
-}
+//}
