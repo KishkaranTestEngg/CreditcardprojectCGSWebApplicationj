@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -96,6 +97,19 @@ WebDriver driver;
     ((JavascriptExecutor)driver).executeScript("arguments[0].click()", driver.findElement(By.xpath("/html/body/app-root/app-admin/div/div[2]/div/div/div/div/div/div/div/app-application-data/div[2]/div/div/div/div[1]/app-card/div/div/div/form/div[1]/div[1]/input")));
     fillbankappnumber.sendKeys("BICABC0412");
     System.out.println("BankAppnofilled"); // Today upto bank fill details code done by kishore lead  07/03/2022
+    Select Selectbranchname =new Select (driver.findElement(By.xpath("//select[@placeholder='Branch Name']")));	
+    Selectbranchname.selectByVisibleText("Egmore");
+    System.out.println("Bank branch name Selected");
+    WebElement Givebatchno = driver.findElement(By.xpath("//input[@placeholder='Batch Number']"));
+    Givebatchno.sendKeys("BranchnoBIC248");
+    System.out.println("BankbatchnogivenSuccessfully");
+    JavascriptExecutor js1 = (JavascriptExecutor) driver;
+    js1.executeScript("window.scrollBy(0,200)");
+    Thread.sleep(1000);
+    Select bankproductcode= new Select (driver.findElement(By.xpath("/html/body/app-root/app-admin/div/div[2]/div/div/div/div/div/div/div/app-application-data/div[2]/div/div/div/div[1]/app-card/div/div/div/form/div[1]/div[4]/select")));
+    bankproductcode.selectByVisibleText("Visa Platinum Customer");
+    System.out.println("Branch product code is selected Successfully"); // Today done upto Branchcode by kishore lead 08/03/2022
+    
 }
 }
 	
