@@ -109,8 +109,28 @@ WebDriver driver;
     Select bankproductcode= new Select (driver.findElement(By.xpath("/html/body/app-root/app-admin/div/div[2]/div/div/div/div/div/div/div/app-application-data/div[2]/div/div/div/div[1]/app-card/div/div/div/form/div[1]/div[4]/select")));
     bankproductcode.selectByVisibleText("Visa Platinum Customer");
     System.out.println("Branch product code is selected Successfully"); // Today done upto Branchcode by kishore lead 08/03/2022
-    
-}
+    }
+  @Test(priority= 6)
+  public void afteropeningapplicationfillpersonaldetails() throws InterruptedException
+  {
+	   Thread.sleep(2000);
+	   JavascriptExecutor js2 = (JavascriptExecutor) driver;
+	   js2.executeScript("window.scrollBy(0,250)");
+	   WebElement fillfirstname = driver.findElement(By.xpath("//input[@placeholder='First Name']"));
+	   fillfirstname.sendKeys("Venky"); 
+	   System.out.println("Firstname got filled");
+	   WebElement fillmiddlename = driver.findElement(By.xpath("//input[@placeholder='Middle Name']"));
+	   fillmiddlename.sendKeys("kish");
+	   System.out.println("Middlename got filled");
+	   WebElement filllastname = driver.findElement(By.xpath("//input[@placeholder='Last Name']"));
+	   filllastname.sendKeys("karan");
+	   System.out.println("Lastname got filled");
+	   WebElement clickdobfield = driver.findElement(By.xpath("//input[@placeholder='DOB']"));
+	   clickdobfield.click();
+	   
+	   
+	   
+  }
 }
 	
 //	@Test(priority =4)
