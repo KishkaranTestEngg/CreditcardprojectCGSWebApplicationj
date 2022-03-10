@@ -125,8 +125,43 @@ WebDriver driver;
 	   WebElement filllastname = driver.findElement(By.xpath("//input[@placeholder='Last Name']"));
 	   filllastname.sendKeys("karan");
 	   System.out.println("Lastname got filled");
+	   Thread.sleep(1000);
 	   WebElement clickdobfield = driver.findElement(By.xpath("//input[@placeholder='DOB']"));
 	   clickdobfield.click();
+	   clickdobfield.sendKeys("10032022");
+	   System.out.println("DOB field got selected");
+	   Select selectgender = new Select (driver.findElement(By.xpath("//select[@placeholder='Gender']")));
+	   selectgender.selectByVisibleText("Male");
+	   WebElement GiveFatherdetails = driver.findElement(By.xpath("//input[@placeholder='Father Name']"));
+	   GiveFatherdetails.sendKeys("Prabakaran");
+	   System.out.println("Father name given");
+	   JavascriptExecutor js3 = (JavascriptExecutor) driver;
+	   js3.executeScript("window.scrollBy(0,250)");
+	   Thread.sleep(1000);
+	   WebElement GiveMotherdetails = driver.findElement(By.xpath("//input[@placeholder='Mother Name']"));
+	   GiveMotherdetails.sendKeys("Indradevi");
+	   System.out.println("Mother name given");
+	   Thread.sleep(1000);
+	   WebElement MotherMaidenname = driver.findElement(By.xpath("/html/body/app-root/app-admin/div/div[2]/div/div/div/div/div/div/div/app-application-data/div[2]/div/div/div/div[1]/app-card/div/div/div/form/div[2]/div[8]/input"));
+	   MotherMaidenname.sendKeys("Cmdevi");
+	   Select Selectmartialstatus = new Select(driver.findElement(By.xpath("//select[@placeholder='Maritial Status']")));
+	   Selectmartialstatus.selectByVisibleText("Married");
+	   WebElement Enterspousename = driver.findElement(By.xpath("//input[@placeholder='Spouse Name']"));
+	   Enterspousename.sendKeys("Divya");
+	   System.out.println("The spouse name entered Successfully");
+	   WebElement Keyinmobilenumber = driver.findElement(By.xpath("//input[@placeholder='20xxxxxx12']"));
+	   Keyinmobilenumber.sendKeys("8794561235");
+	   System.out.println("Mobile number keyedin Successfully");
+	   WebElement EmailID = driver.findElement(By.xpath("//input[@placeholder='Email ID']"));
+	   EmailID.sendKeys("kishtest@cashlinkglobal.com");
+	   System.out.println("Emailid entered Successfully");
+	   Thread.sleep(1000);
+	   WebElement keyindependencies = driver.findElement(By.xpath("/html/body/app-root/app-admin/div/div[2]/div/div/div/div/div/div/div/app-application-data/div[2]/div/div/div/div[1]/app-card/div/div/div/form/div[2]/div[13]/input"));
+	   keyindependencies.sendKeys("2");
+	   System.out.println("Filling no of dependencies done");
+	   driver.findElement(By.xpath("/html/body/app-root/app-admin/div/div[2]/div/div/div/div/div/div/div/app-application-data/div[2]/div/div/div/div[1]/app-card/div/div/div/div/button[1]")).click();
+	   System.out.println("finally clicking the save proceed & Personal details completed"); // Completed Personal details in Application capture kishore lead on march1022
+	   
 	   
 	   
 	   
