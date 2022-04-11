@@ -5,7 +5,13 @@
     <classes>
       <class name="CreditcardprojectAutomation.CreditCardProject.login">
         <methods>
+          <include name="afterlogincheckwhethercorrecturl"/>
+          <include name="loginfunctionality"/>
+          <include name="afteropeningapplicationfillbankdetails"/>
           <include name="Appdriverhit"/>
+          <include name="NavigatetoApplicationfullfillmentoption"/>
+          <include name="clickApplicationdatacaptureoption"/>
+          <include name="OpenNewApplicationfilldetails"/>
           <include name="afteropeningapplicationfillpersonaldetails"/>
         </methods>
       </class> <!-- CreditcardprojectAutomation.CreditCardProject.login -->

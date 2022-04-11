@@ -1,44 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
+<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="59132" started-at="2022-03-10T17:57:52 IST" finished-at="2022-03-10T17:58:51 IST">
+  <suite name="Default suite" duration-ms="70200" started-at="2022-04-11T17:39:38 IST" finished-at="2022-04-11T17:40:48 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="59132" started-at="2022-03-10T17:57:52 IST" finished-at="2022-03-10T17:58:51 IST">
+    <test name="Default test" duration-ms="70200" started-at="2022-04-11T17:39:38 IST" finished-at="2022-04-11T17:40:48 IST">
       <class name="CreditcardprojectAutomation.CreditCardProject.login">
-        <test-method status="PASS" signature="Appdriverhit()[pri:0, instance:CreditcardprojectAutomation.CreditCardProject.login@22eeefeb]" name="Appdriverhit" is-config="true" duration-ms="8806" started-at="2022-03-10T17:57:52 IST" finished-at="2022-03-10T17:58:01 IST">
+        <test-method status="PASS" signature="Appdriverhit()[pri:0, instance:CreditcardprojectAutomation.CreditCardProject.login@1cab0bfb]" name="Appdriverhit" is-config="true" duration-ms="12451" started-at="2022-04-11T17:39:38 IST" finished-at="2022-04-11T17:39:50 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Appdriverhit -->
-        <test-method status="PASS" signature="loginfunctionality()[pri:0, instance:CreditcardprojectAutomation.CreditCardProject.login@22eeefeb]" name="loginfunctionality" duration-ms="2183" started-at="2022-03-10T17:58:01 IST" finished-at="2022-03-10T17:58:03 IST">
+        <test-method status="PASS" signature="loginfunctionality()[pri:0, instance:CreditcardprojectAutomation.CreditCardProject.login@1cab0bfb]" name="loginfunctionality" duration-ms="2201" started-at="2022-04-11T17:39:50 IST" finished-at="2022-04-11T17:39:52 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginfunctionality -->
-        <test-method status="PASS" signature="afterlogincheckwhethercorrecturl()[pri:1, instance:CreditcardprojectAutomation.CreditCardProject.login@22eeefeb]" name="afterlogincheckwhethercorrecturl" duration-ms="2010" started-at="2022-03-10T17:58:03 IST" finished-at="2022-03-10T17:58:05 IST">
+        <test-method status="PASS" signature="afterlogincheckwhethercorrecturl()[pri:1, instance:CreditcardprojectAutomation.CreditCardProject.login@1cab0bfb]" name="afterlogincheckwhethercorrecturl" duration-ms="2009" started-at="2022-04-11T17:39:52 IST" finished-at="2022-04-11T17:39:54 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterlogincheckwhethercorrecturl -->
-        <test-method status="PASS" signature="NavigatetoApplicationfullfillmentoption()[pri:2, instance:CreditcardprojectAutomation.CreditCardProject.login@22eeefeb]" name="NavigatetoApplicationfullfillmentoption" duration-ms="5119" started-at="2022-03-10T17:58:05 IST" finished-at="2022-03-10T17:58:10 IST">
+        <test-method status="PASS" signature="NavigatetoApplicationfullfillmentoption()[pri:2, instance:CreditcardprojectAutomation.CreditCardProject.login@1cab0bfb]" name="NavigatetoApplicationfullfillmentoption" duration-ms="5102" started-at="2022-04-11T17:39:54 IST" finished-at="2022-04-11T17:39:59 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NavigatetoApplicationfullfillmentoption -->
-        <test-method status="PASS" signature="clickApplicationdatacaptureoption()[pri:3, instance:CreditcardprojectAutomation.CreditCardProject.login@22eeefeb]" name="clickApplicationdatacaptureoption" duration-ms="16421" started-at="2022-03-10T17:58:10 IST" finished-at="2022-03-10T17:58:27 IST">
+        <test-method status="PASS" signature="clickApplicationdatacaptureoption()[pri:3, instance:CreditcardprojectAutomation.CreditCardProject.login@1cab0bfb]" name="clickApplicationdatacaptureoption" duration-ms="21231" started-at="2022-04-11T17:39:59 IST" finished-at="2022-04-11T17:40:21 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickApplicationdatacaptureoption -->
-        <test-method status="PASS" signature="OpenNewApplicationfilldetails()[pri:4, instance:CreditcardprojectAutomation.CreditCardProject.login@22eeefeb]" name="OpenNewApplicationfilldetails" duration-ms="10344" started-at="2022-03-10T17:58:27 IST" finished-at="2022-03-10T17:58:37 IST">
+        <test-method status="PASS" signature="OpenNewApplicationfilldetails()[pri:4, instance:CreditcardprojectAutomation.CreditCardProject.login@1cab0bfb]" name="OpenNewApplicationfilldetails" duration-ms="8978" started-at="2022-04-11T17:40:21 IST" finished-at="2022-04-11T17:40:30 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenNewApplicationfilldetails -->
-        <test-method status="PASS" signature="afteropeningapplicationfillbankdetails()[pri:5, instance:CreditcardprojectAutomation.CreditCardProject.login@22eeefeb]" name="afteropeningapplicationfillbankdetails" duration-ms="7322" started-at="2022-03-10T17:58:37 IST" finished-at="2022-03-10T17:58:44 IST">
+        <test-method status="PASS" signature="afteropeningapplicationfillbankdetails()[pri:5, instance:CreditcardprojectAutomation.CreditCardProject.login@1cab0bfb]" name="afteropeningapplicationfillbankdetails" duration-ms="7339" started-at="2022-04-11T17:40:30 IST" finished-at="2022-04-11T17:40:37 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afteropeningapplicationfillbankdetails -->
-        <test-method status="PASS" signature="afteropeningapplicationfillpersonaldetails()[pri:6, instance:CreditcardprojectAutomation.CreditCardProject.login@22eeefeb]" name="afteropeningapplicationfillpersonaldetails" duration-ms="6893" started-at="2022-03-10T17:58:44 IST" finished-at="2022-03-10T17:58:51 IST">
+        <test-method status="PASS" signature="afteropeningapplicationfillpersonaldetails()[pri:6, instance:CreditcardprojectAutomation.CreditCardProject.login@1cab0bfb]" name="afteropeningapplicationfillpersonaldetails" duration-ms="7229" started-at="2022-04-11T17:40:37 IST" finished-at="2022-04-11T17:40:44 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afteropeningapplicationfillpersonaldetails -->
+        <test-method status="PASS" signature="NeedtofillEmploymentdetails()[pri:7, instance:CreditcardprojectAutomation.CreditCardProject.login@1cab0bfb]" name="NeedtofillEmploymentdetails" duration-ms="3624" started-at="2022-04-11T17:40:44 IST" finished-at="2022-04-11T17:40:48 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NeedtofillEmploymentdetails -->
       </class> <!-- CreditcardprojectAutomation.CreditCardProject.login -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

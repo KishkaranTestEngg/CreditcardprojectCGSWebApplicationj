@@ -1,6 +1,6 @@
 package CreditcardprojectAutomation.CreditCardProject;
-import java.time.Duration;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -18,12 +18,14 @@ import junit.framework.Assert;
 public class login 
 {
 WebDriver driver;
+Logger log = LogManager.getLogger(login.class.getName());
 
 	@BeforeTest
 	public void Appdriverhit() throws InterruptedException {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
-		driver.get("http://172.16.10.74:8186/StarCreditApp/#/login");
+		driver.get("http://172.16.10.74:8081/StarPGCreditApp/#/login");	
+		System.out.println("Driver got iniated Successfully");
 		driver.manage().window().maximize();
 		Thread.sleep(3000);
 
@@ -39,15 +41,16 @@ WebDriver driver;
 		WebElement Submit = driver.findElement(By.xpath("//button[@type='submit']"));
 		Submit.click();
 		System.out.println("Login function completed"); // This is committed by gokul
+		
 	}
 
 	@Test(priority = 1)
 	public void afterlogincheckwhethercorrecturl() throws InterruptedException {
-		String Expected = "http://172.16.10.74:8186/StarCreditApp/#/login";
+		String Expected = "http://172.16.10.74:8081/StarPGCreditApp/#/login"; // deployment code done kishore lead 05April2022
 		String CurrentUrl = driver.getCurrentUrl();
 		Assert.assertEquals(Expected, CurrentUrl); //Reconfirmed today 	by kishore lead 02march22
 		Thread.sleep(2000);
-		System.out.println("URl check completed");
+		System.out.println("URl check completed");	
 	}
 	@Test(priority =2)
 	public void NavigatetoApplicationfullfillmentoption() throws InterruptedException
@@ -69,7 +72,7 @@ WebDriver driver;
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/app-root/app-admin/div/div[2]/div/div/nav/div[2]/perfect-scrollbar/div/div[1]/div[2]/ul[2]/li/ul/li[1]/a/span[2]")));
 	    driver.findElement(By.xpath("/html/body/app-root/app-admin/div/div[2]/div/div/nav/div[2]/perfect-scrollbar/div/div[1]/div[2]/ul[2]/li/ul/li[1]/a/span[2]")).click();
 	    System.out.println("Successfully able to open application data capture option"); // Today worked code datacapture by kishore team lead 03/03/2022
-	    //Thread.sleep(1000);
+	    Thread.sleep(1000);
 	
 	}
 	
@@ -101,7 +104,7 @@ WebDriver driver;
     Selectbranchname.selectByVisibleText("Egmore");
     System.out.println("Bank branch name Selected");
     WebElement Givebatchno = driver.findElement(By.xpath("//input[@placeholder='Batch Number']"));
-    Givebatchno.sendKeys("BranchnoBIC248");
+    Givebatchno.sendKeys("BK12");
     System.out.println("BankbatchnogivenSuccessfully");
     JavascriptExecutor js1 = (JavascriptExecutor) driver;
     js1.executeScript("window.scrollBy(0,200)");
@@ -157,16 +160,49 @@ WebDriver driver;
 	   System.out.println("Emailid entered Successfully");
 	   Thread.sleep(1000);
 	   WebElement keyindependencies = driver.findElement(By.xpath("/html/body/app-root/app-admin/div/div[2]/div/div/div/div/div/div/div/app-application-data/div[2]/div/div/div/div[1]/app-card/div/div/div/form/div[2]/div[13]/input"));
-	   keyindependencies.sendKeys("2");
-	   System.out.println("Filling no of dependencies done");
+	   keyindependencies.sendKeys("23456789");
+	   System.out.println("Adhar card no filled");
+	   WebElement fillpancardno = driver.findElement(By.xpath("//input[@formcontrolname='panno']"));
+	   fillpancardno.sendKeys("AWJ345");
+	   System.out.println("Pancardno details filled Successfully");
+	   WebElement Passportnofilled = driver.findElement(By.xpath("//input[@placeholder='Passport No']"));
+	   Passportnofilled.sendKeys("PSD3456");
+	   WebElement fillingdependencies = driver.findElement(By.xpath("//input[@formcontrolname='noofdependency']"));
+	   fillingdependencies.sendKeys("2");
 	   driver.findElement(By.xpath("/html/body/app-root/app-admin/div/div[2]/div/div/div/div/div/div/div/app-application-data/div[2]/div/div/div/div[1]/app-card/div/div/div/div/button[1]")).click();
 	   System.out.println("finally clicking the save proceed & Personal details completed"); // Completed Personal details in Application capture kishore lead on march1022
-	   
+       }
+	   @Test(priority= 7)
+	   public void NeedtofillEmploymentdetails() throws InterruptedException
+	   {
+		   Thread.sleep(3000);
+		   System.out.println("Need to select the Employment details");
+		   Select SelectEmpdetails = new Select (driver.findElement(By.xpath("//select[@formcontrolname='employementType']")));
+		   SelectEmpdetails.selectByValue("Self Employed Professional");
+		   WebElement fillemployeename = driver.findElement(By.xpath("//*[contains(@placeholder,'Employer Name')]"));
+		   fillemployeename.sendKeys("kishorekaran");
+		   WebElement Filloccupationdetails = driver.findElement(By.xpath("//*[contains(@placeholder,'Occupation')]"));
+		   Filloccupationdetails.sendKeys("Software Engineer");
+		   WebElement Giveannualsalary = driver.findElement(By.xpath("//*[contains(@placeholder,'Annual Salary')]"));
+		   Giveannualsalary.sendKeys("1000");
+		   WebElement Otherincomesalary = driver.findElement(By.xpath("//*[contains(@placeholder,'Other Income Salary')]"));
+		   Otherincomesalary.sendKeys("200");
+		   WebElement Bussinessincome = driver.findElement(By.xpath("//*[contains(@placeholder,'Business Income')]"));
+		   Bussinessincome.sendKeys("500");
+		   WebElement Totalincome = driver.findElement(By.xpath("//*[contains(@placeholder,'Total Income')]"));
+		   Totalincome.sendKeys("1700");
+		   WebElement address1 = driver.findElement(By.xpath("//*[contains(@placeholder,'Address Line 1')]"));
+		   address1.sendKeys("welcome to cgs street 1");
+		   WebElement address2  = driver.findElement(By.xpath("//*[contains(@placeholder,'Address Line 2')]"));
+		   address2.sendKeys("North street road");
+		   driver.findElement(By.xpath("/html/body/app-root/app-admin/div/div[2]/div/div/div/div/div/div/div/app-application-data/div[2]/div/div/div/div[1]/app-card/div/div/div/div/button[1]")).click();
+		   System.out.println("Employee details completed"); // Code done upto employee fill details 11 april 2022
+	   }
 	   
 	   
 	   
   }
-}
+
 	
 //	@Test(priority =4)
 //	public void driverclose() {
