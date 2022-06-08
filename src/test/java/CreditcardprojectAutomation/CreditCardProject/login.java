@@ -224,7 +224,7 @@ public class login {
 		driver.findElement(By.xpath(
 				"/html/body/app-root/app-admin/div/div[2]/div/div/div/div/div/div/div/app-application-data/div[2]/div/div/div/div[1]/app-card/div/div/div/div/button[1]"))
 				.click();
-		System.out.println("Employee details completed"); // Code last rework done 7th june 2022
+		System.out.println("Employee details completed"); // Code commit last done on 8th june 2022
 	}
 
 //	@Test(priority = 8)
